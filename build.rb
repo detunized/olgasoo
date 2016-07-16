@@ -5,6 +5,7 @@ require "fileutils"
 require "yaml"
 
 HTML_DIR = "original/HTML"
+IMAGE_DIR = "images"
 OUT_DIR = "site"
 
 CONFIG = YAML.load_file "config.yaml"
@@ -34,6 +35,7 @@ end
 def copy_assets
     FileUtils.mkdir_p OUT_DIR
     system "rsync -a --delete #{HTML_DIR}/assets #{OUT_DIR}/"
+    system "rsync -a --delete #{IMAGE_DIR}/ #{OUT_DIR}/assets/images/"
 end
 
 def remove_elements_by_class doc, classes
@@ -137,7 +139,13 @@ def process_index_html
     # Populate data names
     items = doc.css(".featured-collections-item")
     items.each_with_index do |i, index|
-        i.at_css("h3").content = CONFIG["galleries"][index]["name"]
+        g = CONFIG["galleries"][index]
+
+        i.at_css("h3").content = g["name"]
+
+        img = i.at_css("img")
+        img["alt"] = g["name"]
+        img["src"] = File.join "assets/images", g["image"]
     end
 
     #

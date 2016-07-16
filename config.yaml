@@ -4,11 +4,20 @@ description: Oil and watercolor paintings by Olga Suslova
 view_collection: View Collection
 galleries:
   - name: Deep Blue
+    image: deep-blue.jpg
   - name: Watercolor
+    image: watercolor.jpg
   - name: Baroque
+    image: baroque.jpg
   - name: Sea Shore
+    image: sea-shore.jpg
   - name: Blue Day
+    image: blue-day.jpg
   - name: Fossils
+    image: fossils.jpg
   - name: Forest
+    image: forest.jpg
   - name: Close Up
+    image: close-up.jpg
   - name: Landscape
+    image: landscape.jpg

@@ -2,9 +2,12 @@
 
 require "nokogiri"
 require "fileutils"
+require "yaml"
 
 HTML_DIR = "HTML"
 OUT_DIR = "site"
+
+CONFIG = YAML.load_file "config.yaml"
 
 def load_html filename
     Nokogiri::HTML::Document.parse File.read File.join(HTML_DIR, filename)
@@ -20,6 +23,12 @@ end
 
 def element_with_text doc, tag, text
     doc.css(tag).find { |i| i.text.start_with? text }
+end
+
+def append_to_file filename, text
+    File.open File.join(OUT_DIR, filename), "a" do |io|
+        io.write text
+    end
 end
 
 # Copy assets
@@ -97,12 +106,43 @@ element_with_text(doc, "a", "View Collention").content = "View Collection"
 # Galleries
 #
 
-# copy example items
+# Copy example items
 
-# ...
+items = doc.css(".featured-collections-item")
+
+# Delete all by first
+items[1..-1].each do |i|
+    i.remove
+end
+
+item = items.first
+(CONFIG["galleries"].size - 1).times do
+    item.add_next_sibling item.dup
+end
+
+# Populate data names
+items = doc.css(".featured-collections-item")
+items.each_with_index do |i, index|
+    i.at_css("h3").content = CONFIG["galleries"][index]["name"]
+end
 
 #
 # Save
 #
 
 save_html doc, "index.html"
+
+
+#
+# main.css
+#
+
+append_to_file "assets/css/main.css", <<-EOT
+
+/*--------------------------------------
+    15) Added by detunized
+---------------------------------------*/
+.featured-collections-item {
+    padding-top: 40px;
+}
+EOT

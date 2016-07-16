@@ -13,4 +13,4 @@ Automatic build
 ===============
 
     $ brew install watchman
-    $ watchman-make -p build.rb --make ./build.rb -t ''
+    $ watchman-make -p build.rb config.yaml --make ./build.rb -t ''

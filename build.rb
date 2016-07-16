@@ -4,7 +4,7 @@ require "nokogiri"
 require "fileutils"
 require "yaml"
 
-HTML_DIR = "HTML"
+HTML_DIR = "original/HTML"
 OUT_DIR = "site"
 
 CONFIG = YAML.load_file "config.yaml"

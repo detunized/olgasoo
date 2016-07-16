@@ -1,3 +1,8 @@
+Unpack original template
+========================
+
+    $ unzip ~/Dropbox/stuff/themeforest-14021721-artday-creative-shop-template.zip -d original
+
 HTTP server with livereload
 ===========================
 

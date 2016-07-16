@@ -48,6 +48,10 @@ def remove_elements_by_id doc, ids
     end
 end
 
+def disable_link node
+    node["onclick"] = "return false;"
+end
+
 def process_index_html
     doc = load_html "index.html"
 
@@ -96,10 +100,10 @@ def process_index_html
     right_navbar[0].remove
 
     # Disable "about" link
-    right_navbar[1].at_css("a")["onclick"] = "return false;"
+    disable_link right_navbar[1].at_css("a")
 
     # Disable "about" link
-    right_navbar[2].at_css("a")["onclick"] = "return false;"
+    disable_link right_navbar[2].at_css("a")
 
     # Title
     element_with_text(doc, "h1", "A selection of").content = CONFIG["name"]
@@ -108,7 +112,9 @@ def process_index_html
     element_with_text(doc, "h4", "Spanning the fields of").content = CONFIG["description"]
 
     # Fix "View Collention"
-    element_with_text(doc, "a", "View Collention").content = "View Collection"
+    button = element_with_text(doc, "a", "View Collention")
+    button.content = CONFIG["view_collection"]
+    disable_link button
 
     #
     # Galleries
@@ -118,7 +124,7 @@ def process_index_html
 
     items = doc.css(".featured-collections-item")
 
-    # Delete all by first
+    # Delete all but first
     items[1..-1].each do |i|
         i.remove
     end

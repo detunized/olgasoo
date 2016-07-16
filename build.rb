@@ -38,6 +38,10 @@ def copy_assets
     system "rsync -a --delete #{IMAGE_DIR}/ #{OUT_DIR}/assets/images/"
 end
 
+def replace_original_images
+    FileUtils.mv "#{OUT_DIR}/assets/images/hero-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
+end
+
 def remove_elements_by_class doc, classes
     classes.each do |i|
         doc.at_css(".#{i}").remove
@@ -172,5 +176,6 @@ end
 #
 
 copy_assets
+replace_original_images
 process_index_html
 process_main_css

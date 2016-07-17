@@ -79,6 +79,7 @@ def process_index_html
 
     # Lot's of elements we don't need
     remove_elements_by_class doc, %w[
+        ws-topbar
         ws-arrivals-section
         ws-works-section
         ws-call-section

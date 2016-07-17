@@ -14,16 +14,24 @@ def assert expression, message = ""
     fail message if !expression
 end
 
-def load_html filename
-    Nokogiri::HTML::Document.parse File.read File.join(HTML_DIR, filename)
+def load_file filename
+    File.read File.join(HTML_DIR, filename)
 end
 
-def save_html doc, filename
+def save_file content, filename
     path = File.join OUT_DIR, filename
     FileUtils.mkdir_p File.dirname path
     File.open path, "w" do |io|
-        io.write doc.to_html
+        io.write content
     end
+end
+
+def load_html filename
+    Nokogiri::HTML::Document.parse load_file filename
+end
+
+def save_html doc, filename
+    save_file doc.to_html, filename
 end
 
 def element_with_text doc, tag, text
@@ -71,7 +79,6 @@ def process_index_html
 
     # Lot's of elements we don't need
     remove_elements_by_class doc, %w[
-        ws-topbar
         ws-arrivals-section
         ws-works-section
         ws-call-section
@@ -216,15 +223,18 @@ def process_index_html
 end
 
 def process_main_css
-    append_to_file "assets/css/main.css", <<-EOT
+    doc = load_file "assets/css/main.css"
 
-/*--------------------------------------
-    15) Added by detunized
----------------------------------------*/
-.featured-collections-item {
-    padding-top: 40px;
-}
-EOT
+    # Fix buggy menu box at 768px wide screen
+    doc.sub! "@media only screen and (max-width : 768px) {",
+             "@media only screen and (max-width : 767px) {"
+
+    doc += "
+        .featured-collections-item {
+            padding-top: 40px;
+        }
+    "
+    save_file doc, "assets/css/main.css"
 end
 
 #

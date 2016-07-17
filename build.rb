@@ -111,10 +111,12 @@ def process_index_html
     # Remove "pages" link
     right_navbar[0].remove
 
-    # Disable "about" link
-    disable_link right_navbar[1].at_css("a")
+    # Change "journal" link to etsy
+    link = right_navbar[1].at_css("a")
+    link["href"] = CONFIG["links"]["etsy"]
+    link.content = CONFIG["shop"]["buy_prints"]
 
-    # Disable "about" link
+    # Disable "contact" link
     disable_link right_navbar[2].at_css("a")
 
     # Title

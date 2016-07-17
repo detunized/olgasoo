@@ -10,5 +10,5 @@ images.each do |src|
     FileUtils.mkdir_p File.dirname dst
 
     puts src
-    system "convert -resize 900x1000! #{src} #{dst}"
+    system "convert -resize 900x1000^ -gravity center -extent 900x1000 #{src} #{dst}"
 end

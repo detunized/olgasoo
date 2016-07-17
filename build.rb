@@ -217,12 +217,13 @@ def process_index_html
         i.remove
     end
 
+    # And copy it
     item = items.first
     (CONFIG["galleries"].size - 1).times do
         item.add_next_sibling item.dup
     end
 
-    # Populate data names
+    # Populate items
     items = doc.css(".featured-collections-item")
     items.each_with_index do |i, index|
         g = CONFIG["galleries"][index]
@@ -257,6 +258,9 @@ def generate_gallery doc, config
         sale
     ]
 
+    # Document title
+    doc.title = config["name"]
+
     # Title
     element_with_text(doc, "h1", "Our Products").content = config["name"]
 
@@ -267,9 +271,29 @@ def generate_gallery doc, config
         i.remove
     end
 
+    # And copy it
     item = items.first
     (config["items"].size - 1).times do
         item.add_next_sibling item.dup
+    end
+
+    # Populate items
+    items = doc.css(".ws-works-item")
+    items.each_with_index do |i, index|
+        image = config["items"][index]
+
+        img = i.at_css("figure > img")
+        img["src"] = File.join "assets/images/galleries", config["slug"], image['image']
+        img["alt"] = image["name"]
+
+        # Description
+        i.at_css(".ws-item-category").content = image["description"]
+
+        # Name
+        i.at_css(".ws-item-title").content = image["name"]
+
+        # Remove price
+        i.at_css(".ws-item-price").content = image["description"]
     end
 end
 

@@ -92,7 +92,7 @@ def process_index_html
 
     # Change home dropdown into a simple link
     li = doc.create_element "li"
-    li.inner_html = '<a href="/">Home</a>'
+    li.inner_html = '<a href="index.html">Home</a>'
     left_navbar[0].replace li
 
     # Disable "about" link

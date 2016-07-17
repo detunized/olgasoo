@@ -148,13 +148,13 @@ galleries:
     - name: Queen of the Reef
       image: 01-queen-of-the-reef.jpg
       description: oil on canvas 100x80
-    - name: Triptych BAROQUE - Red Corals for the Queen
+    - name: Red Corals for the Queen
       image: 02-triptych-baroque---red-corals-for-the-queen.jpg
       description: oil on canvas 100x80
-    - name: Triptych BAROQUE - Guards
+    - name: Guards
       image: 03-triptych-baroque---guards.jpg
       description: oil on canvas 100x80
-    - name: Triptych BAROQUE - King and His Treasures
+    - name: King and His Treasures
       image: 04-triptych-baroque---king-and-his-treasures.jpg
       description: oil on canvas 100x80
     - name: Triptych BAROQUE
@@ -206,15 +206,15 @@ galleries:
     - name: Kineret
       image: 09-kineret.jpg
       description: watercolor on paper 50x70 cm
-    - name: Broken Shells of the Black Sea, Bulgaria
+    - name: Broken Shells, Bulgaria
       image: 10-broken-shells-of-the-black-sea,-bulgaria.jpg
       description: watercolor on paper
     - name: Akko, Detail
       image: 11-akko,-detail.jpg
       description: watercolor on paper 50x70 cm
-    - name:
+    - name: Missing
       image: 12-.jpg
-      description:
+      description: Missing
     - name: Eilat, Detail
       image: 13-eilat,-detail.jpg
       description: watercolor on paper 50x70 cm
@@ -298,18 +298,18 @@ galleries:
     - name: Misty Lagoon
       image: 07-misty-lagoon.jpg
       description: oil on canvas 80x60 cms
-    - name: Atlantis, Oil on Canvas 140x110x2
+    - name: Atlantis
       image: 08-atlantis,-oil-on-canvas-140x110x2.jpg
-      description:
+      description: Oil on Canvas 140x110x2
     - name: Napoleon Fish
       image: 09-napoleon-fish.jpg
       description: oil on canvas 50x60 cm
     - name: In the Cave
       image: 10-in-the-cave.jpg
       description: oil on canvas 80x80 cm
-    - name: Zeus Faber, Oil on Canvas 60x60 Cm
+    - name: Zeus Faber
       image: 11-zeus-faber,-oil-on-canvas-60x60-cm.jpg
-      description:
+      description: Oil on Canvas 60x60 Cm
     - name: Still Life With Shells
       image: 12-still-life-with-shells.jpg
       description: oil on canvas 60x60 cms
@@ -345,51 +345,51 @@ galleries:
     slug: close-up
     image: close-up.jpg
     items:
-    - name: Oil on Canvas
+    - name: Close up
       image: 01-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 02-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 03-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 04-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 05-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 06-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 07-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 08-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 09-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 10-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 11-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 12-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 13-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 14-oil-on-canvas.jpg
-      description:
-    - name: Oil on Canvas
+      description: Oil on Canvas
+    - name: Close up
       image: 15-oil-on-canvas.jpg
-      description:
+      description: Oil on Canvas
   - name: Landscape
     slug: landscape
     image: landscape.jpg

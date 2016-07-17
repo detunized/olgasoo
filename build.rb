@@ -40,6 +40,7 @@ end
 
 def replace_original_images
     FileUtils.mv "#{OUT_DIR}/assets/images/hero-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
+    FileUtils.mv "#{OUT_DIR}/assets/images/logo-white.png", "#{OUT_DIR}/assets/img/"
 end
 
 def remove_elements_by_class doc, classes
@@ -71,13 +72,16 @@ def process_index_html
         ws-works-section
         ws-call-section
         ws-subscribe-section
-        ws-logo
-        ws-about-content
     ]
 
     remove_elements_by_id doc, %w[
         ws-instagram-section
     ]
+
+    #
+    # Logo
+    #
+
 
     #
     # Left navbar
@@ -121,6 +125,14 @@ def process_index_html
     button = element_with_text(doc, "a", "View Collention")
     button.content = CONFIG["view_collection"]
     disable_link button
+
+    #
+    # About
+    #
+
+    about = doc.at_css(".ws-about-content")
+    element_with_text(about, "h3", "Made with Love").content = CONFIG["about"]["title"]
+    element_with_text(about, "p", "We are a family").content = CONFIG["about"]["description"]
 
     #
     # Galleries

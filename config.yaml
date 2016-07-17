@@ -2,6 +2,12 @@ title: Olga Suslova
 name: Underwater world
 description: Oil and watercolor paintings by Olga Suslova
 view_collection: Scroll Down
+about:
+    title: Made with love
+    description: I'm fascinated by everything related to the sea. The beauty
+                 of shades and shapes of shells and stones and the amazing
+                 creatures living in the ocean. Listening to the waves crashing
+                 at shore gives me a deep sense of peace and relaxation.
 galleries:
   - name: Deep Blue
     image: deep-blue.jpg

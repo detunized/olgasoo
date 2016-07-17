@@ -76,6 +76,7 @@ def process_index_html
         ws-works-section
         ws-call-section
         ws-subscribe-section
+        ws-footer-payments
     ]
 
     remove_elements_by_id doc, %w[
@@ -197,6 +198,13 @@ def process_index_html
     links[2..-1].each do |i|
         i.remove
     end
+
+    #
+    # Footer bar
+    #
+
+    bar = doc.at_css(".ws-footer-bar")
+    element_with_text(bar, "p", "Handcrafted with love").inner_html = CONFIG["copyright"]
 
     #
     # Save

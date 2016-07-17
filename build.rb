@@ -71,6 +71,10 @@ def disable_link node
     node["onclick"] = "return false;"
 end
 
+def gallery_filename config
+    "gallery-#{config['slug']}.html"
+end
+
 def process_index_html
     doc = load_html "index.html"
 
@@ -173,6 +177,8 @@ def process_index_html
         img = i.at_css("img")
         img["alt"] = g["name"]
         img["src"] = File.join "assets/images", g["image"]
+
+        i.at_css("a")["href"] = gallery_filename g
     end
 
     #
@@ -223,6 +229,14 @@ def process_index_html
     save_html doc, "index.html"
 end
 
+def generate_galleries
+    doc = load_html "shop.html"
+    CONFIG["galleries"].each do |gallery|
+
+        save_html doc, gallery_filename(gallery)
+    end
+end
+
 def process_main_css
     doc = load_file "assets/css/main.css"
 
@@ -245,4 +259,5 @@ end
 copy_assets
 replace_original_images
 process_index_html
+generate_galleries
 process_main_css

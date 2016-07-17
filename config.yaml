@@ -24,20 +24,29 @@ shop:
 copyright: Copyright Olga Suslova &copy; 2016. All Rights Reserved.
 galleries:
   - name: Deep Blue
+    slug: deep-blue
     image: deep-blue.jpg
   - name: Watercolor
+    slug: watercolor
     image: watercolor.jpg
   - name: Baroque
+    slug: baroque
     image: baroque.jpg
   - name: Sea Shore
+    slug: sea-shore
     image: sea-shore.jpg
   - name: Blue Day
+    slug: blue-day
     image: blue-day.jpg
   - name: Fossils
+    slug: fossils
     image: fossils.jpg
   - name: Forest
+    slug: forest
     image: forest.jpg
   - name: Close Up
+    slug: close-up
     image: close-up.jpg
   - name: Landscape
+    slug: landscape
     image: landscape.jpg

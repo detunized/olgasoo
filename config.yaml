@@ -4,16 +4,22 @@ description: Oil and watercolor paintings by Olga Suslova
 view_collection: Scroll Down
 about:
     title: Made with love
-    description: I'm fascinated by everything related to the sea. The beauty
-                 of shades and shapes of shells and stones and the amazing
-                 creatures living in the ocean. Listening to the waves crashing
-                 at shore gives me a deep sense of peace and relaxation.
+    description: "What I try to express through my painting is a sense of harmony
+                 in the nature, the magic that is hidden even in the smallest things.
+                 I agree with Andrew Wyeth when he says: <cite>&ldquo;One's art goes
+                 as far and as deep as one's love goes&rdquo;</cite>."
 footer:
     about: About Me
     description: I am an artist based in Tel Aviv, Israel. I received my education
                  at Arts Academy of St. Petersburg, Russia. In the beginning of my
                  career I worked as a stage designer but now I dedicate all my time
                  to painting. I enjoy my working time, it's the best time for me.
+links:
+  facebook: https://www.facebook.com/olga.suslova.1
+  etsy: https://www.etsy.com/
+shop:
+  prints: Prints
+  originals: Originals
 galleries:
   - name: Deep Blue
     image: deep-blue.jpg

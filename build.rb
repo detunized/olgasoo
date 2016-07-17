@@ -10,6 +10,10 @@ OUT_DIR = "site"
 
 CONFIG = YAML.load_file "config.yaml"
 
+def assert expression, message = ""
+    fail message if !expression
+end
+
 def load_html filename
     Nokogiri::HTML::Document.parse File.read File.join(HTML_DIR, filename)
 end
@@ -79,15 +83,11 @@ def process_index_html
     ]
 
     #
-    # Logo
-    #
-
-
-    #
     # Left navbar
     #
 
     left_navbar = doc.css("ul.navbar-left > li")
+    assert left_navbar.size == 3
 
     # Change home dropdown into a simple link
     li = doc.create_element "li"
@@ -105,6 +105,7 @@ def process_index_html
     #
 
     right_navbar = doc.css("ul.navbar-right > li")
+    assert right_navbar.size == 3
 
     # Remove "pages" link
     right_navbar[0].remove
@@ -132,14 +133,13 @@ def process_index_html
 
     about = doc.at_css(".ws-about-content")
     element_with_text(about, "h3", "Made with Love").content = CONFIG["about"]["title"]
-    element_with_text(about, "p", "We are a family").content = CONFIG["about"]["description"]
+    element_with_text(about, "p", "We are a family").inner_html = CONFIG["about"]["description"]
 
     #
     # Galleries
     #
 
     # Copy example items
-
     items = doc.css(".featured-collections-item")
 
     # Delete all but first
@@ -165,16 +165,42 @@ def process_index_html
     end
 
     #
-    # Save
-    #
-
-    #
     # Footer
     #
 
     footer = doc.at_css(".ws-footer")
     element_with_text(footer, "h3", "About Us").content = CONFIG["footer"]["about"]
     element_with_text(footer, "p", "We are a family").content = CONFIG["footer"]["description"]
+
+    # Remove some columns (keep the columns, just remove the content)
+    columns = footer.css(".ws-footer-col")
+    assert columns.size == 4
+
+    columns[1].inner_html = ""
+
+    # Update social network links
+    links = columns[2].css("li > a")
+    assert links.size == 4
+    links[0]["href"] = CONFIG["links"]["facebook"]
+    links[1..-1].each do |i|
+        disable_link i
+    end
+
+    # Update shop links
+    links = columns[3].css("li > a")
+    assert links.size == 4
+    links[0]["href"] = CONFIG["links"]["etsy"]
+    links[0].content = CONFIG["shop"]["prints"]
+    links[1]["href"] = "contact.html"
+    links[1].content = CONFIG["shop"]["originals"]
+    disable_link links[1]
+    links[2..-1].each do |i|
+        i.remove
+    end
+
+    #
+    # Save
+    #
 
     save_html doc, "index.html"
 end

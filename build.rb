@@ -57,13 +57,17 @@ end
 
 def remove_elements_by_class doc, classes
     classes.each do |i|
-        doc.at_css(".#{i}").remove
+        e = doc.at_css(".#{i}")
+        assert e, "Can't file class '#{i}'"
+        e.remove
     end
 end
 
 def remove_elements_by_id doc, ids
     ids.each do |i|
-        doc.at_css("##{i}").remove
+        e = doc.at_css("##{i}")
+        assert e, "Can't file id '#{i}"
+        e.remove
     end
 end
 
@@ -75,18 +79,12 @@ def gallery_filename config
     "gallery-#{config['slug']}.html"
 end
 
-def process_index_html
-    doc = load_html "index.html"
-
-    # Document title
-    doc.title = CONFIG["title"]
+def load_and_clean_up_html filename
+    doc = load_html filename
 
     # Lot's of elements we don't need
     remove_elements_by_class doc, %w[
         ws-topbar
-        ws-arrivals-section
-        ws-works-section
-        ws-call-section
         ws-subscribe-section
         ws-footer-payments
     ]
@@ -130,6 +128,63 @@ def process_index_html
 
     # Disable "contact" link
     disable_link right_navbar[2].at_css("a")
+
+    #
+    # Footer
+    #
+
+    footer = doc.at_css(".ws-footer")
+    element_with_text(footer, "h3", "About Us").content = CONFIG["footer"]["about"]
+    element_with_text(footer, "p", "We are a family").content = CONFIG["footer"]["description"]
+
+    # Remove some columns (keep the columns, just remove the content)
+    columns = footer.css(".ws-footer-col")
+    assert columns.size == 4
+
+    columns[1].inner_html = ""
+
+    # Update social network links
+    links = columns[2].css("li > a")
+    assert links.size == 4
+    links[0]["href"] = CONFIG["links"]["facebook"]
+    links[1..-1].each do |i|
+        disable_link i
+    end
+
+    # Update shop links
+    links = columns[3].css("li > a")
+    assert links.size == 4
+    links[0]["href"] = CONFIG["links"]["etsy"]
+    links[0].content = CONFIG["shop"]["prints"]
+    links[1]["href"] = "contact.html"
+    links[1].content = CONFIG["shop"]["originals"]
+    disable_link links[1]
+    links[2..-1].each do |i|
+        i.remove
+    end
+
+    #
+    # Footer bar
+    #
+
+    bar = doc.at_css(".ws-footer-bar")
+    element_with_text(bar, "p", "Handcrafted with love").inner_html = CONFIG["copyright"]
+
+    doc
+end
+
+def process_index_html
+    doc = load_and_clean_up_html "index.html"
+
+    # Lot's of elements we don't need
+    remove_elements_by_class doc, %w[
+        ws-arrivals-section
+        ws-works-section
+        ws-call-section
+    ]
+
+    # Document title
+    doc.title = CONFIG["title"]
 
     # Title
     element_with_text(doc, "h1", "A selection of").content = CONFIG["name"]
@@ -182,58 +237,47 @@ def process_index_html
     end
 
     #
-    # Footer
-    #
-
-    footer = doc.at_css(".ws-footer")
-    element_with_text(footer, "h3", "About Us").content = CONFIG["footer"]["about"]
-    element_with_text(footer, "p", "We are a family").content = CONFIG["footer"]["description"]
-
-    # Remove some columns (keep the columns, just remove the content)
-    columns = footer.css(".ws-footer-col")
-    assert columns.size == 4
-
-    columns[1].inner_html = ""
-
-    # Update social network links
-    links = columns[2].css("li > a")
-    assert links.size == 4
-    links[0]["href"] = CONFIG["links"]["facebook"]
-    links[1..-1].each do |i|
-        disable_link i
-    end
-
-    # Update shop links
-    links = columns[3].css("li > a")
-    assert links.size == 4
-    links[0]["href"] = CONFIG["links"]["etsy"]
-    links[0].content = CONFIG["shop"]["prints"]
-    links[1]["href"] = "contact.html"
-    links[1].content = CONFIG["shop"]["originals"]
-    disable_link links[1]
-    links[2..-1].each do |i|
-        i.remove
-    end
-
-    #
-    # Footer bar
-    #
-
-    bar = doc.at_css(".ws-footer-bar")
-    element_with_text(bar, "p", "Handcrafted with love").inner_html = CONFIG["copyright"]
-
-    #
     # Save
     #
 
     save_html doc, "index.html"
 end
 
-def generate_galleries
-    doc = load_html "shop.html"
-    CONFIG["galleries"].each do |gallery|
+def generate_gallery doc, config
+    # Lot's of elements we don't need
+    remove_elements_by_class doc, %w[
+        nav-tabs
+        ws-more-btn-holder
+    ]
 
-        save_html doc, gallery_filename(gallery)
+    remove_elements_by_id doc, %w[
+        prints
+        illustrated
+        journals
+        sale
+    ]
+
+    # Title
+    element_with_text(doc, "h1", "Our Products").content = config["name"]
+
+    # Find all items
+    all = doc.at_css("#all")
+    items = all.css(".ws-works-item")
+    items[1..-1].each do |i|
+        i.remove
+    end
+
+    item = items.first
+    (config["items"].size - 1).times do
+        item.add_next_sibling item.dup
+    end
+end
+
+def generate_galleries
+    CONFIG["galleries"].each do |i|
+        doc = load_and_clean_up_html "shop.html"
+        generate_gallery doc, i
+        save_html doc, gallery_filename(i)
     end
 end
 

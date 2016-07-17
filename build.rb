@@ -168,6 +168,14 @@ def process_index_html
     # Save
     #
 
+    #
+    # Footer
+    #
+
+    footer = doc.at_css(".ws-footer")
+    element_with_text(footer, "h3", "About Us").content = CONFIG["footer"]["about"]
+    element_with_text(footer, "p", "We are a family").content = CONFIG["footer"]["description"]
+
     save_html doc, "index.html"
 end
 

@@ -8,6 +8,12 @@ about:
                  of shades and shapes of shells and stones and the amazing
                  creatures living in the ocean. Listening to the waves crashing
                  at shore gives me a deep sense of peace and relaxation.
+footer:
+    about: About Me
+    description: I am an artist based in Tel Aviv, Israel. I received my education
+                 at Arts Academy of St. Petersburg, Russia. In the beginning of my
+                 career I worked as a stage designer but now I dedicate all my time
+                 to painting. I enjoy my working time, it's the best time for me.
 galleries:
   - name: Deep Blue
     image: deep-blue.jpg

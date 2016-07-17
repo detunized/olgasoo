@@ -53,6 +53,7 @@ end
 def replace_original_images
     FileUtils.mv "#{OUT_DIR}/assets/images/hero-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
     FileUtils.mv "#{OUT_DIR}/assets/images/logo-white.png", "#{OUT_DIR}/assets/img/"
+    FileUtils.mv "#{OUT_DIR}/assets/images/logo-black.png", "#{OUT_DIR}/assets/img/"
     FileUtils.mv "#{OUT_DIR}/assets/images/shop-header-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
 end
 
@@ -250,7 +251,6 @@ def generate_gallery doc, config
     remove_elements_by_class doc, %w[
         nav-tabs
         ws-more-btn-holder
-        ws-logo
     ]
 
     remove_elements_by_id doc, %w[

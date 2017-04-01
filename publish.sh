@@ -11,6 +11,7 @@ cd $DIR
     git pull --ff
 
     rsync -a --delete --exclude .git ../site/ ./
+    find . -name .DS_Store -delete
     git add -A
     git commit -m "Publish generated site"
     git push origin gh-pages

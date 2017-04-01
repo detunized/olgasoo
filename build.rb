@@ -55,6 +55,7 @@ def replace_original_images
     FileUtils.mv "#{OUT_DIR}/assets/images/logo-white.png", "#{OUT_DIR}/assets/img/"
     FileUtils.mv "#{OUT_DIR}/assets/images/logo-black.png", "#{OUT_DIR}/assets/img/"
     FileUtils.mv "#{OUT_DIR}/assets/images/shop-header-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
+    FileUtils.mv "#{OUT_DIR}/assets/images/favicon.ico", "#{OUT_DIR}/assets/img/"
 end
 
 def remove_elements_by_class doc, classes

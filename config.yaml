@@ -80,7 +80,7 @@ galleries:
       description: oil on canvas 80x80 x 3
     - name: Blue Ringed Octopus
       image: 15-blue-ringed-octopus.jpg
-      description: oil on canvas 45x45 cm
+      description: oil on canvas 50x40 cm
 
   - name: Watercolor
     slug: watercolor
@@ -184,6 +184,12 @@ galleries:
     - name: Sunset in the Coral Garden
       image: 10-sunset-in-the-coral-garden.jpg
       description: oil on canvas 100x100 cm
+    - name: Coral Reef Baroque
+      image: 11-coral-reef-baroque.jpg
+      description: oil on canvas 80x70 cm
+    - name: Blue Ringed Octopus
+      image: 12-blue-ringed-octopus.jpg
+      description: oil on canvas 45x45 cm
 
   - name: Sea Shore
     slug: sea-shore

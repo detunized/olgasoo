@@ -222,32 +222,20 @@ galleries:
     - name: Akko, Detail
       image: 11-akko,-detail.jpg
       description: watercolor on paper 50x70 cm
-    - name: Missing
-      image: 12-.jpg
-      description: Missing
-    - name: Eilat, Detail
-      image: 13-eilat,-detail.jpg
+    - name: Spain
+      image: 12-spain.jpg
       description: watercolor on paper 50x70 cm
     - name: Crete
-      image: 14-crete.jpg
+      image: 13-crete.jpg
       description: watercolor on paper 50x70 cm
-    - name: Crete, Detail
-      image: 15-crete,-detail.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Venice
-      image: 16-venice.jpg
-      description: watercolour on paper 50x70 cm
-    - name: Herzliya
-      image: 17-herzliya.jpg
-      description: watercolour on paper 35x50 cm
-    - name: Rosh HaNikra
-      image: 18-rosh-hanikra.jpg
+    - name: Australia
+      image: 14-australia.jpg
       description: watercolor on paper 50x70 cm
     - name: Netania
-      image: 19-netania.jpg
-      description: watercolour on paper 50x70 cm
-    - name: Haifa
-      image: 20-haifa.jpg
+      image: 15-netania.jpg
+      description: watercolor on paper 50x70 cm
+    - name: Crete
+      image: 16-crete.jpg
       description: watercolour on paper 50x70 cm
 
   - name: Blue Day

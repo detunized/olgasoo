@@ -144,6 +144,9 @@ galleries:
     - name: Gulf Stream Series
       image: 20-gulf-stream-series.jpg
       description: watercolor on paper 70x50 cm
+    - name: Polar Sea
+      image: 21-polar-sea.jpg
+      description: watercolor on paper
   - name: Baroque
     slug: baroque
     image: baroque.jpg

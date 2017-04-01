@@ -397,8 +397,8 @@ galleries:
       image: 15-oil-on-canvas.jpg
       description: Oil on Canvas
   - name: Desert
-    slug: landscape
-    image: landscape.jpg
+    slug: desert
+    image: desert.jpg
     items:
     - name: Desert Landscape
       image: 01-desert-landscape.jpg

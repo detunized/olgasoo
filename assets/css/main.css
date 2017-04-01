@@ -2211,14 +2211,14 @@ ul.ws-footer-payments li{
         .featured-collections-item {
             padding-top: 40px;
         }
-
+    
         .ws-overlay {
             background-color: rgba(0, 0, 0, 0);
         }
-
+    
         .ws-works-item figure:hover img {
             opacity: 1;
             -webkit-transform: scale(1);
             transform: scale(1);
         }
-
+    

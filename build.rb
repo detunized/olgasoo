@@ -147,11 +147,19 @@ def load_and_clean_up_html filename
     columns[1].inner_html = ""
 
     # Update social network links
-    links = columns[2].css("li > a")
-    assert links.size == 4
-    links[0]["href"] = CONFIG["links"]["facebook"]
-    links[1..-1].each do |i|
-        disable_link i
+    rows = columns[2].css("li")
+    assert rows.size == 4
+
+    # Facebook
+    rows[0].css("a")[0]["href"] = CONFIG["links"]["facebook"]
+
+    # OAS
+    rows[1].css("a")[0]["href"] = CONFIG["links"]["oas"]
+    rows[1].css("a > i")[0]["class"] = "fa fa-globe fa-lg"
+    rows[1].css("a > text()")[0].content = " Ocean Artists"
+
+    rows[2..-1].each do |i|
+        i.remove
     end
 
     # Update shop links

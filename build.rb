@@ -319,6 +319,23 @@ def process_main_css
             padding-top: 40px;
         }
     "
+
+    # Remove dark gallery overlay
+    doc += "
+        .ws-overlay {
+            background-color: rgba(0, 0, 0, 0);
+        }
+    "
+
+    # Remove hover painting animation
+    doc += "
+        .ws-works-item figure:hover img {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    "
+
     save_file doc, "assets/css/main.css"
 end
 

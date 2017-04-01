@@ -80,6 +80,7 @@ galleries:
     - name: Blue Ringed Octopus
       image: 15-blue-ringed-octopus.jpg
       description: oil on canvas 45x45 cm
+
   - name: Watercolor
     slug: watercolor
     image: watercolor.jpg
@@ -147,6 +148,7 @@ galleries:
     - name: Polar Sea
       image: 21-polar-sea.jpg
       description: watercolor on paper
+
   - name: Baroque
     slug: baroque
     image: baroque.jpg
@@ -181,6 +183,7 @@ galleries:
     - name: Sunset in the Coral Garden
       image: 10-sunset-in-the-coral-garden.jpg
       description: oil on canvas 100x100 cm
+
   - name: Sea Shore
     slug: sea-shore
     image: sea-shore.jpg
@@ -245,6 +248,7 @@ galleries:
     - name: Haifa
       image: 20-haifa.jpg
       description: watercolour on paper 50x70 cm
+
   - name: Blue Day
     slug: blue-day
     image: blue-day.jpg
@@ -279,6 +283,48 @@ galleries:
     # - name: Mirrored Turtle
     #   image: 10-mirrored-turtle.jpg
     #   description: oil on canvas 100x100 x 2
+
+  - name: Desert
+    slug: desert
+    image: desert.jpg
+    items:
+    - name: Desert Landscape
+      image: 01-desert-landscape.jpg
+      description: watercolor on paper 28x60 cm
+    - name: Desert Landscape
+      image: 02-desert-landscape.jpg
+      description: watercolor on paper 23x50 cm
+    - name: Desert Landscape
+      image: 03-desert-landscape.jpg
+      description: watercolor on paper 28x60 cm
+    - name: Desert Landscape
+      image: 04-desert-landscape.jpg
+      description: watercolor on paper 28x60 cm
+    - name: Desert Landscape
+      image: 05-desert-landscape.jpg
+      description: watercolor on paper 28x60 cm
+    - name: Desert Landscape
+      image: 06-desert-landscape.jpg
+      description: watercolor on paper 23x50 cm
+    - name: Desert Landscape
+      image: 07-desert-landscape.jpg
+      description: mixed media on cardboard 25х70 cm
+    - name: Desert Landscape
+      image: 08-desert-landscape.jpg
+      description: mixed media on cardboard 25х70 cm
+    - name: Desert Landscape
+      image: 09-desert-landscape.jpg
+      description: mixed media on cardboard 25х70 cm
+    - name: Desert Landscape
+      image: 10-desert-landscape.jpg
+      description: mixed media on cardboard 25х70 cm
+    - name: Desert Landscape
+      image: 11-desert-landscape.jpg
+      description: mixed media on cardboard 25х70 cm
+    - name: Desert Landscape
+      image: 12-desert-landscape.jpg
+      description: mixed media on cardboard 25х70 cm
+
   - name: Fossils
     slug: fossils
     image: fossils.jpg
@@ -328,6 +374,7 @@ galleries:
     - name: Sea Collection
       image: 15-sea-collection.jpg
       description: oil on canvas 80x60 cms
+
   - name: Forest
     slug: forest
     image: forest.jpg
@@ -347,6 +394,7 @@ galleries:
     - name: Enjoying the Sunset
       image: 05-enjoying-the-sunset.jpg
       description: oil on canvas 60x60 cm
+
   - name: Close Up
     slug: close-up
     image: close-up.jpg
@@ -396,43 +444,3 @@ galleries:
     - name: Close up
       image: 15-oil-on-canvas.jpg
       description: Oil on Canvas
-  - name: Desert
-    slug: desert
-    image: desert.jpg
-    items:
-    - name: Desert Landscape
-      image: 01-desert-landscape.jpg
-      description: watercolor on paper 28x60 cm
-    - name: Desert Landscape
-      image: 02-desert-landscape.jpg
-      description: watercolor on paper 23x50 cm
-    - name: Desert Landscape
-      image: 03-desert-landscape.jpg
-      description: watercolor on paper 28x60 cm
-    - name: Desert Landscape
-      image: 04-desert-landscape.jpg
-      description: watercolor on paper 28x60 cm
-    - name: Desert Landscape
-      image: 05-desert-landscape.jpg
-      description: watercolor on paper 28x60 cm
-    - name: Desert Landscape
-      image: 06-desert-landscape.jpg
-      description: watercolor on paper 23x50 cm
-    - name: Desert Landscape
-      image: 07-desert-landscape.jpg
-      description: mixed media on cardboard 25х70 cm
-    - name: Desert Landscape
-      image: 08-desert-landscape.jpg
-      description: mixed media on cardboard 25х70 cm
-    - name: Desert Landscape
-      image: 09-desert-landscape.jpg
-      description: mixed media on cardboard 25х70 cm
-    - name: Desert Landscape
-      image: 10-desert-landscape.jpg
-      description: mixed media on cardboard 25х70 cm
-    - name: Desert Landscape
-      image: 11-desert-landscape.jpg
-      description: mixed media on cardboard 25х70 cm
-    - name: Desert Landscape
-      image: 12-desert-landscape.jpg
-      description: mixed media on cardboard 25х70 cm

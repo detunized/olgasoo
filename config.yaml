@@ -273,9 +273,9 @@ galleries:
     - name: Infinity
       image: 09-infinity.jpg
       description: oil on canvas 80x100 cm
-    - name: Mirrored Turtle
-      image: 10-mirrored-turtle.jpg
-      description: oil on canvas 100x100 x 2
+    # - name: Mirrored Turtle
+    #   image: 10-mirrored-turtle.jpg
+    #   description: oil on canvas 100x100 x 2
   - name: Fossils
     slug: fossils
     image: fossils.jpg

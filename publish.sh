@@ -3,6 +3,8 @@ set -e
 
 DIR=tmp
 
+./build.rb
+
 rm -rf $DIR
 git clone --branch gh-pages . $DIR
 

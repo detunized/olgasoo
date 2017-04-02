@@ -389,6 +389,9 @@ galleries:
     - name: Enjoying the Sunset
       image: 05-enjoying-the-sunset.jpg
       description: oil on canvas 60x60 cm
+    - name: Lizard Mona
+      image: 06-lizard-mona.jpg
+      description: oil on canvas 80x60 cm
 
   - name: Close Up
     slug: close-up

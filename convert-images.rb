@@ -13,6 +13,23 @@ def sh s
         .join " "
 end
 
+# Headers
+images = Dir["images/original-headers/*.jpg"]
+images.each do |src|
+    dst = src.sub "original-headers/", ""
+    FileUtils.mkdir_p File.dirname dst
+
+    w = 1200
+    h = 1200
+
+    puts src
+
+    Dir.mktmpdir do |dir|
+        sh "convert '#{src}' -resize #{w}x#{h} '#{dst}'"
+    end
+end
+
+# Galleries
 images = Dir["images/original-galleries/**/*.jpg"]
 images.each do |src|
     dst = src.sub "original-galleries", "galleries"

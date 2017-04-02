@@ -35,6 +35,7 @@ galleries:
   - name: Deep Blue
     slug: deep-blue
     image: deep-blue.jpg
+    header: deep-blue-header.jpg
     items:
     - name: Beautiful Beast
       image: 01-beautiful-beast.jpg
@@ -85,6 +86,7 @@ galleries:
   - name: Watercolor
     slug: watercolor
     image: watercolor.jpg
+    header: watercolor-header.jpg
     items:
     - name: Sleeping Whales
       image: 01-sleeping-whales.jpg
@@ -153,6 +155,7 @@ galleries:
   - name: Baroque
     slug: baroque
     image: baroque.jpg
+    header: baroque-header.jpg
     items:
     - name: Queen of the Reef
       image: 01-queen-of-the-reef.jpg
@@ -194,6 +197,7 @@ galleries:
   - name: Sea Shore
     slug: sea-shore
     image: sea-shore.jpg
+    header: sea-shore-header.jpg
     items:
     - name: Eilat , Detail
       image: 01-eilat-,-detail.jpg
@@ -247,6 +251,7 @@ galleries:
   - name: Blue Day
     slug: blue-day
     image: blue-day.jpg
+    header: blue-day-header.jpg
     items:
     - name: Blue Day
       image: 01-blue-day.jpg
@@ -282,6 +287,7 @@ galleries:
   - name: Desert
     slug: desert
     image: desert.jpg
+    header: desert-header.jpg
     items:
     - name: Desert Landscape
       image: 01-desert-landscape.jpg
@@ -323,6 +329,7 @@ galleries:
   - name: Fossils
     slug: fossils
     image: fossils.jpg
+    header: fossils-header.jpg
     items:
     - name: Fossils
       image: 01-fossils.jpg
@@ -373,6 +380,7 @@ galleries:
   - name: Forest
     slug: forest
     image: forest.jpg
+    header: forest-header.jpg
     items:
     - name: The Last Minute
       image: 01-the-last-minute.jpg
@@ -396,6 +404,7 @@ galleries:
   - name: Close Up
     slug: close-up
     image: close-up.jpg
+    header: close-up-header.jpg
     items:
     - name: Close up
       image: 01-oil-on-canvas.jpg

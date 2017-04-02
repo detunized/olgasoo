@@ -275,6 +275,9 @@ def generate_gallery doc, config
     # Title
     element_with_text(doc, "h1", "Our Products").content = config["name"]
 
+    # Header image
+    doc.css(".ws-parallax-header")[0]["data-image-src"] = File.join "assets/images", config["header"]
+
     # Find all items
     all = doc.at_css("#all")
     items = all.css(".ws-works-item")

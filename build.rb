@@ -124,9 +124,9 @@ def load_and_clean_up_html filename
     # Remove "pages" link
     right_navbar[0].remove
 
-    # Change "journal" link to etsy
+    # Change "journal" link to "buy prints"
     link = right_navbar[1].at_css("a")
-    link["href"] = CONFIG["links"]["etsy"]
+    link["href"] = CONFIG["shop"]["prints_link"]
     link.content = CONFIG["shop"]["buy_prints"]
 
     # Disable "contact" link
@@ -165,9 +165,9 @@ def load_and_clean_up_html filename
     # Update shop links
     links = columns[3].css("li > a")
     assert links.size == 4
-    links[0]["href"] = CONFIG["links"]["etsy"]
+    links[0]["href"] = CONFIG["shop"]["prints_link"]
     links[0].content = CONFIG["shop"]["prints"]
-    links[1]["href"] = "contact.html"
+    links[1]["href"] = CONFIG["shop"]["originals_link"]
     links[1].content = CONFIG["shop"]["originals"]
     disable_link links[1]
     links[2..-1].each do |i|

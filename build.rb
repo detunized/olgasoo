@@ -313,6 +313,9 @@ def generate_gallery doc, config
 
         # Remove price
         i.at_css(".ws-item-price").content = image["description"]
+
+        # Link
+        i.at_css("a")["href"] = File.join "assets/images/original-galleries", config["slug"], image['image']
     end
 end
 

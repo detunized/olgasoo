@@ -1,35 +1,35 @@
 (function ($, window, document, undefined) {
     'use strict';
-    
-	$(document).ready(function() {		
+
+	$(document).ready(function() {
 
 	  	// Parallax Background
 	  	jQuery('.contact-parallax').parallax;
 
-	  	// Owl Carousel		
+	  	// Owl Carousel
 		jQuery("#ws-items-carousel").owlCarousel({
-			items :4,		
+			items :4,
 			navigation : true
 		});
 
-		// Products Carousel 
+		// Products Carousel
 		jQuery("#ws-products-carousel").owlCarousel({
 			navigation : true,
 			slideSpeed : 300,
 			paginationSpeed : 400,
 			singleItem:true
-		});	
-		
+		});
+
 		// Page Loader
-	    jQuery("#preloader").delay(1500).fadeOut(500);       	
-		 
+	    jQuery("#preloader").delay(1500).fadeOut(500);
+
 		// Scroll Reveal
 		window.sr = new scrollReveal();
 
 		// Hover Dropdown
-		
-		
-		// Hero Image	
+
+
+		// Hero Image
 		jQuery("#ws-hero").show().revolution({
 			sliderType:"hero",
 			jsFileLocation:"assets/js/plugins/revolution/js/",
@@ -63,8 +63,8 @@
 				disableFocusListener:false,
 			}
 		});
-		
-		// Hero FullScreen	
+
+		// Hero FullScreen
 		jQuery("#ws-hero-fullscreen").show().revolution({
 			sliderType:"hero",
 			jsFileLocation:"assets/js/plugins/revolution/js/",
@@ -97,7 +97,7 @@
 				simplifyAll:"off",
 				disableFocusListener:false,
 			}
-		});	
+		});
 
 		// Fullscreen Slider
 		jQuery("#ws-fullscreen-slider").revolution({
@@ -106,13 +106,13 @@
 			sliderLayout:"fullscreen",
 			delay:9000,
 			navigation: {
-				arrows:{enable:true}				
-			},			
+				arrows:{enable:true}
+			},
 			gridwidth:1230,
 			spinner:"off",
 			disableProgressBar:"on",
-			gridheight:720		
-		});	
+			gridheight:720
+		});
 
 		// Fullwidth
 		jQuery("#ws-fullwidth-slider").revolution({
@@ -121,21 +121,21 @@
 			sliderLayout:"fullscreen",
 			delay:9000,
 			navigation: {
-				arrows:{enable:true}				
-			},			
+				arrows:{enable:true}
+			},
 			gridwidth:1230,
 			spinner:"off",
 			disableProgressBar:"on",
 			fullWidth:"on",
 			forceFullWidth:"on",
-			gridheight:500		
-		});	
+			gridheight:500
+		});
 
-		// 3D Parallax Slider	
+		// 3D Parallax Slider
 	    jQuery("#ws-3d-parallax").show().revolution({
 	        sliderType: "hero",
 	        fullScreenOffsetContainer:".ws-topbar, .ws-header-static",
-	        jsFileLocation: "assets/js/plugins/revolution/js/",            
+	        jsFileLocation: "assets/js/plugins/revolution/js/",
 	        sliderLayout: "fullscreen",
 	        dottedOverlay: "none",
 	        delay: 9000,
@@ -168,7 +168,7 @@
 	            simplifyAll: "off",
 	            disableFocusListener: false,
 	        }
-	    });    
+	    });
 
     });
 

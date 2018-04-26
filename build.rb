@@ -194,6 +194,10 @@ def process_index_html
         ws-call-section
     ]
 
+    remove_elements_by_id doc, %W[
+        preloader
+    ]
+
     # Document title
     doc.title = CONFIG["title"]
 
@@ -267,6 +271,7 @@ def generate_gallery doc, config
         illustrated
         journals
         sale
+        preloader
     ]
 
     # Document title

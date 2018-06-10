@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# This script fetches the original art from the no longer existing olgasoo.com running on zenphoto.
+# It's only here for reference.
+
 require "mechanize"
 require "cgi"
 require "titleize"

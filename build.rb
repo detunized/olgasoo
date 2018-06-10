@@ -5,7 +5,7 @@ require "fileutils"
 require "yaml"
 
 HTML_DIR = "original/HTML"
-IMAGE_DIR = "images"
+REPLACEMENT_IMAGE_DIR = "replacement-images"
 OUT_DIR = "site"
 
 CONFIG = YAML.load_file "config.yaml"
@@ -47,15 +47,14 @@ end
 def copy_assets
     FileUtils.mkdir_p OUT_DIR
     system "rsync -a --delete #{HTML_DIR}/assets #{OUT_DIR}/"
-    system "rsync -a --delete #{IMAGE_DIR}/ #{OUT_DIR}/assets/images/"
 end
 
 def replace_original_images
-    FileUtils.mv "#{OUT_DIR}/assets/images/hero-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
-    FileUtils.mv "#{OUT_DIR}/assets/images/logo-white.png", "#{OUT_DIR}/assets/img/"
-    FileUtils.mv "#{OUT_DIR}/assets/images/logo-black.png", "#{OUT_DIR}/assets/img/"
-    FileUtils.mv "#{OUT_DIR}/assets/images/shop-header-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
-    FileUtils.mv "#{OUT_DIR}/assets/images/favicon.ico", "#{OUT_DIR}/assets/img/"
+    FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/hero-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
+    FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/logo-white.png", "#{OUT_DIR}/assets/img/"
+    FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/logo-black.png", "#{OUT_DIR}/assets/img/"
+    FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/shop-header-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
+    FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/favicon.ico", "#{OUT_DIR}/assets/img/"
 end
 
 def remove_elements_by_class doc, classes

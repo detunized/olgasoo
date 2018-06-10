@@ -3,7 +3,8 @@
 require "fileutils"
 require "tmpdir"
 
-#FileUtils.rm_rf "images/galleries"
+ART_DIR = "original/artwork"
+OUT_DIR = "processed-images"
 
 def sh s
     system s
@@ -13,16 +14,36 @@ def sh s
         .join " "
 end
 
-# Headers
-images = Dir["images/original-headers/*.jpg"]
-images.each do |src|
-    dst = src.sub "original-headers/", ""
-    FileUtils.mkdir_p File.dirname dst
+FileUtils.rm_rf OUT_DIR
+FileUtils.mkdir_p OUT_DIR
+
+# Covers
+images = Dir["#{ART_DIR}/covers/*.jpg"]
+images.each_with_index do |src, index|
+    filename = File.basename(src).sub(".jpg", "-cover.jpg")
+    dst = File.join OUT_DIR, filename
 
     w = 1200
     h = 1200
 
-    puts src
+    puts "[#{index + 1}/#{images.size}] #{src} -> #{dst}"
+
+    Dir.mktmpdir do |dir|
+        # Resize only if bigger
+        sh "convert '#{src}' -resize #{w}x#{h}\\> '#{dst}'"
+    end
+end
+
+# Headers
+images = Dir["#{ART_DIR}/headers/*.jpg"]
+images.each_with_index do |src, index|
+    filename = File.basename(src).sub(".jpg", "-header.jpg")
+    dst = File.join OUT_DIR, filename
+
+    w = 1200
+    h = 1200
+
+    puts "[#{index + 1}/#{images.size}] #{src} -> #{dst}"
 
     Dir.mktmpdir do |dir|
         sh "convert '#{src}' -resize #{w}x#{h} '#{dst}'"
@@ -30,9 +51,12 @@ images.each do |src|
 end
 
 # Galleries
-images = Dir["images/original-galleries/**/*.jpg"]
-images.each do |src|
-    dst = src.sub "original-galleries", "galleries"
+images = Dir["#{ART_DIR}/galleries/*/*.jpg"]
+images.each_with_index do |src, index|
+    filename = File.basename src
+    gallery = File.basename File.dirname src
+    dst = File.join OUT_DIR, gallery, filename
+
     FileUtils.mkdir_p File.dirname dst
 
     w = 900
@@ -42,7 +66,7 @@ images.each do |src|
     iw = (w * k).to_i
     ih = (h * k).to_i
 
-    puts src
+    puts "[#{index + 1}/#{images.size}] #{src} -> #{dst}"
 
     Dir.mktmpdir do |dir|
         tmp = File.join dir, "cropped.jpg"
@@ -58,5 +82,11 @@ images.each do |src|
             +swap -background 'gray(94%)' -layers merge +repage
             -gravity center -extent #{w}x#{h} #{dst}
         "
+
+        odst = dst.sub ".jpg", "-original.jpg"
+        ow = 1200
+        oh = 1200
+
+        sh "convert '#{src}' -resize #{ow}x#{oh}\\> '#{odst}'"
     end
 end

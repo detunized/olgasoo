@@ -6,6 +6,7 @@ require "yaml"
 
 HTML_DIR = "original/HTML"
 REPLACEMENT_IMAGE_DIR = "replacement-images"
+PROCESSED_IMAGE_DIR = "processed-images"
 OUT_DIR = "site"
 
 CONFIG = YAML.load_file "config.yaml"
@@ -55,6 +56,10 @@ def replace_original_images
     FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/logo-black.png", "#{OUT_DIR}/assets/img/"
     FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/shop-header-bg.jpg", "#{OUT_DIR}/assets/img/backgrounds/"
     FileUtils.cp "#{REPLACEMENT_IMAGE_DIR}/favicon.ico", "#{OUT_DIR}/assets/img/"
+end
+
+def copy_processed_images
+    system "rsync -a --delete #{PROCESSED_IMAGE_DIR}/ #{OUT_DIR}/assets/images/"
 end
 
 def remove_elements_by_class doc, classes
@@ -301,7 +306,7 @@ def generate_gallery doc, config
         image = config["items"][index]
 
         img = i.at_css("figure > img")
-        img["src"] = File.join "assets/images/galleries", config["slug"], image['image']
+        img["src"] = File.join "assets/images", config["slug"], image["image"]
         img["alt"] = image["name"]
 
         # Description
@@ -314,7 +319,7 @@ def generate_gallery doc, config
         i.at_css(".ws-item-price").content = image["description"]
 
         # Link
-        i.at_css("a")["href"] = File.join "assets/images/original-galleries", config["slug"], image['image']
+        i.at_css("a")["href"] = File.join "assets/images", config["slug"], image["original_image"]
     end
 end
 
@@ -364,6 +369,7 @@ end
 
 copy_assets
 replace_original_images
+copy_processed_images
 process_index_html
 generate_galleries
 process_main_css

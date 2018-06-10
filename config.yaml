@@ -35,7 +35,7 @@ shop:
 galleries:
   - name: Baroque
     slug: baroque
-    image: baroque.jpg
+    image: baroque-cover.jpg
     header: baroque-header.jpg
     items:
     - name: Queen of the Reef
@@ -77,7 +77,7 @@ galleries:
 
   - name: Sea Shore
     slug: sea-shore
-    image: sea-shore.jpg
+    image: sea-shore-cover.jpg
     header: sea-shore-header.jpg
     items:
     - name: Eilat , Detail
@@ -131,7 +131,7 @@ galleries:
 
   - name: Blue Day
     slug: blue-day
-    image: blue-day.jpg
+    image: blue-day-cover.jpg
     header: blue-day-header.jpg
     items:
     - name: Blue Day
@@ -167,7 +167,7 @@ galleries:
 
   - name: Desert
     slug: desert
-    image: desert.jpg
+    image: desert-cover.jpg
     header: desert-header.jpg
     items:
     - name: Desert Landscape
@@ -209,7 +209,7 @@ galleries:
 
   - name: Deep Blue
     slug: deep-blue
-    image: deep-blue.jpg
+    image: deep-blue-cover.jpg
     header: deep-blue-header.jpg
     items:
     - name: Beautiful Beast
@@ -260,7 +260,7 @@ galleries:
 
   - name: Close Up
     slug: close-up
-    image: close-up.jpg
+    image: close-up-cover.jpg
     header: close-up-header.jpg
     items:
     - name: Close up
@@ -311,7 +311,7 @@ galleries:
 
   - name: Forest
     slug: forest
-    image: forest.jpg
+    image: forest-cover.jpg
     header: forest-header.jpg
     items:
     - name: The Last Minute
@@ -335,7 +335,7 @@ galleries:
 
   - name: Watercolor
     slug: watercolor
-    image: watercolor.jpg
+    image: watercolor-cover.jpg
     header: watercolor-header.jpg
     items:
     - name: Sleeping Whales
@@ -404,7 +404,7 @@ galleries:
 
   - name: Fossils
     slug: fossils
-    image: fossils.jpg
+    image: fossils-cover.jpg
     header: fossils-header.jpg
     items:
     - name: Fossils

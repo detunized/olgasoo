@@ -6,6 +6,8 @@ require "tmpdir"
 ART_DIR = "original/artwork"
 OUT_DIR = "processed-images"
 
+REBUILD = ARGV.include?("-r") || ARGV.include?("--rebuild")
+
 def sh s
     system s
         .split("\n")
@@ -14,7 +16,15 @@ def sh s
         .join " "
 end
 
-FileUtils.rm_rf OUT_DIR
+def make src, dst, command_or_commands
+    if REBUILD || !File.exist?(dst) || File.mtime(src) > File.mtime(dst)
+        [command_or_commands].flatten.each do |i|
+            sh i
+        end
+    end
+end
+
+FileUtils.rm_rf OUT_DIR if REBUILD
 FileUtils.mkdir_p OUT_DIR
 
 # Covers
@@ -30,7 +40,7 @@ images.each_with_index do |src, index|
 
     Dir.mktmpdir do |dir|
         # Resize only if bigger
-        sh "convert '#{src}' -resize #{w}x#{h}\\> '#{dst}'"
+        make src, dst, "convert '#{src}' -resize #{w}x#{h}\\> '#{dst}'"
     end
 end
 
@@ -46,7 +56,7 @@ images.each_with_index do |src, index|
     puts "[#{index + 1}/#{images.size}] #{src} -> #{dst}"
 
     Dir.mktmpdir do |dir|
-        sh "convert '#{src}' -resize #{w}x#{h} '#{dst}'"
+        make src, dst, "convert '#{src}' -resize #{w}x#{h} '#{dst}'"
     end
 end
 
@@ -71,22 +81,20 @@ images.each_with_index do |src, index|
     Dir.mktmpdir do |dir|
         tmp = File.join dir, "cropped.jpg"
 
-        sh "
+        make src, dst, ["
             convert #{src} -resize #{iw}x#{ih}^
             -gravity center -extent #{iw}x#{ih} #{tmp}
-        "
-
-        sh "
+        ", "
             convert #{tmp}
             \\( +clone -background black -shadow 75x10+9+9 \\)
             +swap -background 'gray(94%)' -layers merge +repage
             -gravity center -extent #{w}x#{h} #{dst}
-        "
+        "]
 
         odst = dst.sub ".jpg", "-original.jpg"
         ow = 1200
         oh = 1200
 
-        sh "convert '#{src}' -resize #{ow}x#{oh}\\> '#{odst}'"
+        make src, odst, "convert '#{src}' -resize #{ow}x#{oh}\\> '#{odst}'"
     end
 end

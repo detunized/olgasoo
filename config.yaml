@@ -92,71 +92,102 @@ galleries:
     image: sea-shore-cover.jpg
     header: sea-shore-header.jpg
     items:
-    - name: Eilat , Detail
-      image: 01-eilat-,-detail.jpg
-      original_image: 01-eilat-,-detail-original.jpg
-      description: watercolor on paper 50x70 cm
+    - name: Eilat
+      image: 01-eilat.jpg
+      original_image: 01-eilat-original.jpg
+      description: watercolor on paper 50 x 70 cm
     - name: Herzliya
       image: 02-herzliya.jpg
       original_image: 02-herzliya-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Eilat
-      image: 03-eilat.jpg
-      original_image: 03-eilat-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Eilat
-      image: 04-eilat.jpg
-      original_image: 04-eilat-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Venece
-      image: 05-venece.jpg
-      original_image: 05-venece-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Shells on Sand
-      image: 06-shells-on-sand.jpg
-      original_image: 06-shells-on-sand-original.jpg
-      description: watercolour on paper 35x50 cm
-    - name: Shells on the Sand
-      image: 07-shells-on-the-sand.jpg
-      original_image: 07-shells-on-the-sand-original.jpg
-      description: watercolour on paper 35x50 cm
+      description: watercolor on paper 50 x 70 cm
+    - name: Eilat, Nasicha
+      image: 03-eilat-nasicha.jpg
+      original_image: 03-eilat-nasicha-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Netanya
+      image: 04-netanya.jpg
+      original_image: 04-netanya-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Venice
+      image: 05-venice.jpg
+      original_image: 05-venice-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Nahariya
+      image: 06-nahariya.jpg
+      original_image: 06-nahariya-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Shells on Send
+      image: 07-shells-on-send.jpg
+      original_image: 07-shells-on-send-original.jpg
+      description: watercolor on paper 35 x 50 cm
+    - name: Minori, Italy
+      image: 08-minori-italy.jpg
+      original_image: 08-minori-italy-original.jpg
+      description: watercolor on paper 40 x 60 cm
+    - name: Hof HaBonim
+      image: 09-hof-habonim.jpg
+      original_image: 09-hof-habonim-original.jpg
+      description: watercolor on paper 50 x 70 cm
     - name: Dead Sea
-      image: 08-dead-sea.jpg
-      original_image: 08-dead-sea-original.jpg
-      description: watercolor on paper 50x70 cm
+      image: 10-dead-sea.jpg
+      original_image: 10-dead-sea-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Almunecar, Spain
+      image: 11-almunecar-spain.jpg
+      original_image: 11-almunecar-spain-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Shells onn Send
+      image: 12-shells-onn-send.jpg
+      original_image: 12-shells-onn-send-original.jpg
+      description: watercolor on paper 35 x 50 cm
+    - name: Caesarea
+      image: 13-caesarea.jpg
+      original_image: 13-caesarea-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Rosh HaNikra
+      image: 14-rosh-hanikra.jpg
+      original_image: 14-rosh-hanikra-original.jpg
+      description: watercolor on paper 40 x 60 cm
+    - name: Black Sea, Bulgaria
+      image: 15-black-sea-bulgaria.jpg
+      original_image: 15-black-sea-bulgaria-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Rosh HaNikra
+      image: 16-rosh-hanikra.jpg
+      original_image: 16-rosh-hanikra-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Palmahim
+      image: 17-palmahim.jpg
+      original_image: 17-palmahim-original.jpg
+      description: watercolor on paper 40 x 60 cm
+    - name: Tel Aviv
+      image: 18-tel-aviv.jpg
+      original_image: 18-tel-aviv-original.jpg
+      description: watercolor on paper 35 x 50 cm
+    - name: Crete
+      image: 19-crete.jpg
+      original_image: 19-crete-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Cyprus
+      image: 20-cyprus.jpg
+      original_image: 20-cyprus-original.jpg
+      description: watercolor on paper 50 x 70 cm
     - name: Kineret
-      image: 09-kineret.jpg
-      original_image: 09-kineret-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Broken Shells, Bulgaria
-      image: 10-broken-shells-of-the-black-sea,-bulgaria.jpg
-      original_image: 10-broken-shells-of-the-black-sea,-bulgaria-original.jpg
+      image: 21-kineret.jpg
+      original_image: 21-kineret-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Paleochora, Crete
+      image: 22-paleochora-crete.jpg
+      original_image: 22-paleochora-crete-original.jpg
+      description: watercolor on paper 50 x 70 cm
+    - name: Tel Aviv
+      image: 23-tel-aviv.jpg
+      original_image: 23-tel-aviv-original.jpg
+      description: watercolor on paper 30 x 50 cm
+    - name: Eilat
+      image: 24-eilat.jpg
+      original_image: 24-eilat-original.jpg
       description: watercolor on paper
-    - name: Akko, Detail
-      image: 11-akko,-detail.jpg
-      original_image: 11-akko,-detail-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Spain
-      image: 12-spain.jpg
-      original_image: 12-spain-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Crete
-      image: 13-crete.jpg
-      original_image: 13-crete-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Australia
-      image: 14-australia.jpg
-      original_image: 14-australia-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Netania
-      image: 15-netania.jpg
-      original_image: 15-netania-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Crete
-      image: 16-crete.jpg
-      original_image: 16-crete-original.jpg
-      description: watercolour on paper 50x70 cm
-
   - name: Blue Day
     slug: blue-day
     image: blue-day-cover.jpg

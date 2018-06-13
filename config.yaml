@@ -454,50 +454,50 @@ galleries:
     image: watercolor-cover.jpg
     header: watercolor-header.jpg
     items:
-    - name: Sleeping Whales
-      image: 01-sleeping-whales.jpg
-      original_image: 01-sleeping-whales-original.jpg
-      description: watercolor on paper 85x60 cm
-    - name: Gulf Stream
-      image: 02-gulf-stream.jpg
-      original_image: 02-gulf-stream-original.jpg
-      description: watercolor on paper 50x70 cm
-    - name: Gulf Stream Series
-      image: 03-gulf-stream-series.jpg
-      original_image: 03-gulf-stream-series-original.jpg
-      description: watercolor on paper 65x80
-    - name: Gulf Stream Series
-      image: 04-gulf-stream-series.jpg
-      original_image: 04-gulf-stream-series-original.jpg
-      description: watercolor on paper 65x80
-    - name: Sea Turtle
-      image: 05-sea-turtle.jpg
-      original_image: 05-sea-turtle-original.jpg
-      description: watercolor on paper 60x60 cm
+    - name: Melting Ice
+      image: 01-melting-ice.jpg
+      original_image: 01-melting-ice-original.jpg
+      description: watercolor on paper
+    - name: Melting Landscape
+      image: 02-melting-landscape.jpg
+      original_image: 02-melting-landscape-original.jpg
+      description: watercolor on paper
+    - name: Vanishing World
+      image: 03-vanishing-world.jpg
+      original_image: 03-vanishing-world-original.jpg
+      description: watercolor on paper
     - name: Sea Dragon
-      image: 06-sea-dragon.jpg
-      original_image: 06-sea-dragon-original.jpg
+      image: 04-sea-dragon.jpg
+      original_image: 04-sea-dragon-original.jpg
       description: watercolor on paper
-    - name: Melting Ice
-      image: 07-melting-ice.jpg
-      original_image: 07-melting-ice-original.jpg
+    - name: Sleeping Whales
+      image: 05-sleeping-whales.jpg
+      original_image: 05-sleeping-whales-original.jpg
       description: watercolor on paper
-    - name: Polar Sea
-      image: 08-polar-sea.jpg
-      original_image: 08-polar-sea-original.jpg
+    - name: Galf Stream
+      image: 06-galf-stream.jpg
+      original_image: 06-galf-stream-original.jpg
       description: watercolor on paper
-    - name: Melting Ice
-      image: 09-melting-ice.jpg
-      original_image: 09-melting-ice-original.jpg
+    - name: Orca Whale
+      image: 07-orca-whale.jpg
+      original_image: 07-orca-whale-original.jpg
       description: watercolor on paper
-    - name: Polar Sea
-      image: 10-polar-sea.jpg
-      original_image: 10-polar-sea-original.jpg
+    - name: Arctic Landscape
+      image: 08-arctic-landscape.jpg
+      original_image: 08-arctic-landscape-original.jpg
+      description: watercolor on paper
+    - name: Whales Family
+      image: 09-whales-family.jpg
+      original_image: 09-whales-family-original.jpg
       description: watercolor on paper
     - name: Mola Mola
-      image: 11-mola-mola.jpg
-      original_image: 11-mola-mola-original.jpg
-      description: watercolour on paper 50x35 cm
+      image: 10-mola-mola.jpg
+      original_image: 10-mola-mola-original.jpg
+      description: watercolor on paper
+    - name: Hello from Arctic
+      image: 11-hello-from-arctic.jpg
+      original_image: 11-hello-from-arctic-original.jpg
+      description: watercolor on paper
     - name: Happy Whale
       image: 12-happy-whale.jpg
       original_image: 12-happy-whale-original.jpg
@@ -506,37 +506,61 @@ galleries:
       image: 13-polar-sea.jpg
       original_image: 13-polar-sea-original.jpg
       description: watercolor on paper
-    - name: Polar Sea
-      image: 14-polar-sea.jpg
-      original_image: 14-polar-sea-original.jpg
+    - name: Sea Turtle
+      image: 14-sea-turtle.jpg
+      original_image: 14-sea-turtle-original.jpg
       description: watercolor on paper
-    - name: Polar Sea
-      image: 15-polar-sea.jpg
-      original_image: 15-polar-sea-original.jpg
-      description: watercolor on paper
-    - name: Hello!
-      image: 16-hello!.jpg
-      original_image: 16-hello!-original.jpg
+    - name: Gulf Stream
+      image: 15-gulf-stream.jpg
+      original_image: 15-gulf-stream-original.jpg
       description: watercolor on paper
     - name: Whales
-      image: 17-whales.jpg
-      original_image: 17-whales-original.jpg
+      image: 16-whales.jpg
+      original_image: 16-whales-original.jpg
       description: watercolor on paper
-    - name: Polar Sea
-      image: 18-polar-sea.jpg
-      original_image: 18-polar-sea-original.jpg
+    - name: Deep Blue
+      image: 17-deep-blue.jpg
+      original_image: 17-deep-blue-original.jpg
+      description: watercolor on paper
+    - name: Galf Stream
+      image: 18-galf-stream.jpg
+      original_image: 18-galf-stream-original.jpg
       description: watercolor on paper
     - name: Polar Sea
       image: 19-polar-sea.jpg
       original_image: 19-polar-sea-original.jpg
       description: watercolor on paper
-    - name: Gulf Stream Series
-      image: 20-gulf-stream-series.jpg
-      original_image: 20-gulf-stream-series-original.jpg
-      description: watercolor on paper 70x50 cm
-    - name: Polar Sea
-      image: 21-polar-sea.jpg
-      original_image: 21-polar-sea-original.jpg
+    - name: Sea Turtle Portrait
+      image: 20-sea-turtle-portrait.jpg
+      original_image: 20-sea-turtle-portrait-original.jpg
+      description: watercolor on paper
+    - name: Dolfins
+      image: 21-dolfins.jpg
+      original_image: 21-dolfins-original.jpg
+      description: watercolor on paper
+    - name: Infinity
+      image: 22-infinity.jpg
+      original_image: 22-infinity-original.jpg
+      description: watercolor on paper
+    - name: Infiniy
+      image: 23-infiniy.jpg
+      original_image: 23-infiniy-original.jpg
+      description: watercolor on paper
+    - name: Whale Shark
+      image: 24-whale-shark.jpg
+      original_image: 24-whale-shark-original.jpg
+      description: watercolor on paper
+    - name: Icebergs
+      image: 25-icebergs.jpg
+      original_image: 25-icebergs-original.jpg
+      description: watercolor on paper
+    - name: Stream
+      image: 26-stream.jpg
+      original_image: 26-stream-original.jpg
+      description: watercolor on paper
+    - name: Posidonia Protection Poster
+      image: 27-posidonia-protection-poster.jpg
+      original_image: 27-posidonia-protection-poster-original.jpg
       description: watercolor on paper
 
   - name: Fossils

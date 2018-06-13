@@ -474,9 +474,9 @@ galleries:
       image: 05-sleeping-whales.jpg
       original_image: 05-sleeping-whales-original.jpg
       description: watercolor on paper
-    - name: Galf Stream
-      image: 06-galf-stream.jpg
-      original_image: 06-galf-stream-original.jpg
+    - name: Gulf Stream
+      image: 06-gulf-stream.jpg
+      original_image: 06-gulf-stream-original.jpg
       description: watercolor on paper
     - name: Orca Whale
       image: 07-orca-whale.jpg
@@ -522,9 +522,9 @@ galleries:
       image: 17-deep-blue.jpg
       original_image: 17-deep-blue-original.jpg
       description: watercolor on paper
-    - name: Galf Stream
-      image: 18-galf-stream.jpg
-      original_image: 18-galf-stream-original.jpg
+    - name: Gulf Stream
+      image: 18-gulf-stream.jpg
+      original_image: 18-gulf-stream-original.jpg
       description: watercolor on paper
     - name: Polar Sea
       image: 19-polar-sea.jpg

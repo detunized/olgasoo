@@ -419,35 +419,35 @@ galleries:
       original_image: 15-oil-on-canvas-original.jpg
       description: Oil on Canvas
 
-  - name: Forest
-    slug: forest
-    image: forest-cover.jpg
-    header: forest-header.jpg
-    items:
-    - name: The Last Minute
-      image: 01-the-last-minute.jpg
-      original_image: 01-the-last-minute-original.jpg
-      description: oil on canvas 100x70 cm
-    - name: Mimicry
-      image: 02-mimicry.jpg
-      original_image: 02-mimicry-original.jpg
-      description: oil on canvas 80x80 cm
-    - name: Life in the Grass
-      image: 03-life-in-the-grass.jpg
-      original_image: 03-life-in-the-grass-original.jpg
-      description: oil on canvas 60x60 cm
-    - name: Going Green
-      image: 04-going-green.jpg
-      original_image: 04-going-green-original.jpg
-      description: oil on canvas 60x60 cm
-    - name: Enjoying the Sunset
-      image: 05-enjoying-the-sunset.jpg
-      original_image: 05-enjoying-the-sunset-original.jpg
-      description: oil on canvas 60x60 cm
-    - name: Lizard Mona
-      image: 06-lizard-mona.jpg
-      original_image: 06-lizard-mona-original.jpg
-      description: oil on canvas 80x60 cm
+  # - name: Forest
+  #   slug: forest
+  #   image: forest-cover.jpg
+  #   header: forest-header.jpg
+  #   items:
+  #   - name: The Last Minute
+  #     image: 01-the-last-minute.jpg
+  #     original_image: 01-the-last-minute-original.jpg
+  #     description: oil on canvas 100x70 cm
+  #   - name: Mimicry
+  #     image: 02-mimicry.jpg
+  #     original_image: 02-mimicry-original.jpg
+  #     description: oil on canvas 80x80 cm
+  #   - name: Life in the Grass
+  #     image: 03-life-in-the-grass.jpg
+  #     original_image: 03-life-in-the-grass-original.jpg
+  #     description: oil on canvas 60x60 cm
+  #   - name: Going Green
+  #     image: 04-going-green.jpg
+  #     original_image: 04-going-green-original.jpg
+  #     description: oil on canvas 60x60 cm
+  #   - name: Enjoying the Sunset
+  #     image: 05-enjoying-the-sunset.jpg
+  #     original_image: 05-enjoying-the-sunset-original.jpg
+  #     description: oil on canvas 60x60 cm
+  #   - name: Lizard Mona
+  #     image: 06-lizard-mona.jpg
+  #     original_image: 06-lizard-mona-original.jpg
+  #     description: oil on canvas 80x60 cm
 
   - name: Watercolor
     slug: watercolor
